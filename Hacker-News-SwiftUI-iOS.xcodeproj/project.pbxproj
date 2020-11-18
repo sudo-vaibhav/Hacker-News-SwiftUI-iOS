@@ -11,6 +11,10 @@
 		E2B1DB3325650F3300A8E27B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1DB3225650F3300A8E27B /* ContentView.swift */; };
 		E2B1DB3525650F3A00A8E27B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B1DB3425650F3A00A8E27B /* Assets.xcassets */; };
 		E2B1DB3825650F3A00A8E27B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B1DB3725650F3A00A8E27B /* Preview Assets.xcassets */; };
+		E2B1DB422565141B00A8E27B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1DB412565141B00A8E27B /* NetworkManager.swift */; };
+		E2B1DB462565155500A8E27B /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1DB452565155500A8E27B /* PostData.swift */; };
+		E2B1DB4A25651BB100A8E27B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1DB4925651BB100A8E27B /* DetailView.swift */; };
+		E2B1DB4E2565202C00A8E27B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1DB4D2565202C00A8E27B /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		E2B1DB3425650F3A00A8E27B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2B1DB3725650F3A00A8E27B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2B1DB3925650F3A00A8E27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B1DB412565141B00A8E27B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E2B1DB452565155500A8E27B /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		E2B1DB4925651BB100A8E27B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E2B1DB4D2565202C00A8E27B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E2B1DB502565224300A8E27B /* Hacker-News-SwiftUI-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hacker-News-SwiftUI-iOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +61,10 @@
 		E2B1DB2F25650F3300A8E27B /* Hacker-News-SwiftUI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E2B1DB502565224300A8E27B /* Hacker-News-SwiftUI-iOS.entitlements */,
+				E2B1DB40256513F500A8E27B /* Models */,
 				E2B1DB3025650F3300A8E27B /* Hacker_News_SwiftUI_iOSApp.swift */,
-				E2B1DB3225650F3300A8E27B /* ContentView.swift */,
+				E2B1DB4825651B9C00A8E27B /* Views */,
 				E2B1DB3425650F3A00A8E27B /* Assets.xcassets */,
 				E2B1DB3925650F3A00A8E27B /* Info.plist */,
 				E2B1DB3625650F3A00A8E27B /* Preview Content */,
@@ -67,6 +78,25 @@
 				E2B1DB3725650F3A00A8E27B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2B1DB40256513F500A8E27B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2B1DB412565141B00A8E27B /* NetworkManager.swift */,
+				E2B1DB452565155500A8E27B /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2B1DB4825651B9C00A8E27B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2B1DB3225650F3300A8E27B /* ContentView.swift */,
+				E2B1DB4925651BB100A8E27B /* DetailView.swift */,
+				E2B1DB4D2565202C00A8E27B /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B1DB422565141B00A8E27B /* NetworkManager.swift in Sources */,
+				E2B1DB462565155500A8E27B /* PostData.swift in Sources */,
 				E2B1DB3325650F3300A8E27B /* ContentView.swift in Sources */,
+				E2B1DB4E2565202C00A8E27B /* WebView.swift in Sources */,
+				E2B1DB4A25651BB100A8E27B /* DetailView.swift in Sources */,
 				E2B1DB3125650F3300A8E27B /* Hacker_News_SwiftUI_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,8 +301,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hacker-News-SwiftUI-iOS/Hacker-News-SwiftUI-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hacker-News-SwiftUI-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 69Y6BUQUFV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Hacker-News-SwiftUI-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -278,6 +314,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.vaibhavchopra.Hacker-News-SwiftUI-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,8 +325,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hacker-News-SwiftUI-iOS/Hacker-News-SwiftUI-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hacker-News-SwiftUI-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 69Y6BUQUFV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Hacker-News-SwiftUI-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -299,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.vaibhavchopra.Hacker-News-SwiftUI-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
